@@ -131,6 +131,7 @@ background-color: var(--cor-hover);
 
     .cabecalho__menu {
         justify-content: center;
+        gap: 2.5rem;
     }
 
     .apresentacao {
