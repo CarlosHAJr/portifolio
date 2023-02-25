@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');  /*Endereço da fonte*/
+
+:root {
+    --cor-primaria: #000000;   /*Variáveis de cores*/
+    --cor-secundaria: #F6F6F6;
+    --cor-tercieria: #22D4FD;
+    --cor-hover: #272722;
+
+    --fonte-primaria: 'Krona One', sans-serif;     /*Variáveis Fontes*/
+    --fonte-secundaria:'Montserrat', sans-serif;
+}
+
+*{    
+    margin: 0;       /*reseta o css*/
+    padding: 0;
+}
+
+body {
+    /* height: 100vh;   Preenche toda tela  (VH => Viewport (tela)) */
+    box-sizing: border-box;  /*Elementos filhos respeitam limite do pai*/
+    background-color: var(--cor-primaria);  /*Cor do fundo*/
+    color: var(--cor-secundaria);  /*Cor da Fonte*/
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family:var(--fonte-secundaria);;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-tercieria);
+    text-decoration: none;
+    
+}
+
+.apresentacao {              
+    padding: 8% 15%;
+    display: flex;      /*Flexbox (Organiza os elementos)*/  
+    align-items: center;   /*Alinha os elementos (section (textos) e imagen)*/
+    justify-content: space-between;   /*Espaço entre os elementos*/
+    gap: 82px;
+}
+
+
+
+.apresentacao__conteudo {
+    width: 50%;  /*Largura*/
+    display: flex;
+    flex-direction: column; /*Orienta em coluna*/
+    gap: 40px;  /*Espaçamento*/
+}
+
+.apresentacao__conteudo__titulo {  /*Referência do Titulo*/
+    font-size: 2.25rem;   /*Tamanho da fonte*/
+    font-family: var(--fonte-primaria);  /*Fonte*/
+}
+
+.titulo-destaque {
+    color: var(--cor-tercieria);  /*Cor da CLASSE especificada no HTML*/
+}
+
+.apresentacao__conteudo__texto {  /*Referência do Texto*/
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__conteudo__texto a {
+    text-decoration: none;
+    color: var(--cor-tercieria);
+}
+
+.apresentacao__links {  /*Referência da DIV(divisão visual, sem efeito para os navegadores)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+font-family: var(--fonte-primaria);
+font-weight: 400;
+font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao {  /*Referência dos Botões*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-tercieria);
+    width: 50%;  /*Largura do botão*/
+    text-align: center;  /*Alinhamento do texto*/
+    border-radius: 8px;  /*Raio da borda do botão*/
+    font-size: 1.5rem;  /*Tamanho da Fonte do Texto*/
+    font-weight: 600;
+    padding: 21.5px 0;  /*Espaçamento entre o conteúdo (texto) e a borda*/
+    text-decoration: none;  /*Decoração padrão (sublinhado)*/
+    color: var(--cor-secundaria);  /*Cor do Texto*/
+    font-family: var(--fonte-secundaria);  /*Fonte*/
+}
+.apresentacao__links__link:hover {  /*Hover, efeito quando o pointer passa em cima*/
+background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;    
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-tercieria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px)  {   /*Define a condição de apresentação de acordo com a tela*/
+    
+    .cabecalho {
+        padding: 10%;      
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+}
+
